@@ -36,7 +36,29 @@ Original:
 Add this line (example):
 
 ```html
-<p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
-```
+<p><strong>Deployed by:</strong> DMI Cohort 2 | Olalekan Fashola | Group 6 | Week 4 | 07-02-2026</p>
+
+<h2> Requirement </h2>
+
+This task is to dynamically generate the date in the footer of the index.html file
+
+<h2> How date is generated </h2>
+ 
+ Date is now generated dynamically.
+
+<h2> A small code snippet (footer section + JS if used) </h2>
+
+I added "<span id="deployDate"></span>" in footer where date was
+
+<script>
+
+    const dateElement = document.getElementById('deployDate');
+    const now = new Date();
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    const formattedDate = now.toLocaleDateString('en-GB', options);
+    dateElement.textContent = formattedDate;
+
+</script>
+
 
 ✅ This proof must be visible in your browser screenshot submission.
